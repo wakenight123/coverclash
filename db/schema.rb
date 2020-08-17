@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_17_035606) do
+ActiveRecord::Schema.define(version: 2020_08_17_064921) do
 
   create_table "covartists", force: :cascade do |t|
     t.string "name"
@@ -33,9 +33,17 @@ ActiveRecord::Schema.define(version: 2020_08_17_035606) do
     t.integer "song_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "language_id"
+    t.string "video"
   end
 
   create_table "genres", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "languages", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -51,6 +59,8 @@ ActiveRecord::Schema.define(version: 2020_08_17_035606) do
     t.integer "genre_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "language_id"
+    t.string "video"
   end
 
   create_table "users", force: :cascade do |t|
