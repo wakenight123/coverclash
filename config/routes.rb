@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
 
-  root 'application#index'
-
-  get '/' => 'sessions#new'
+  
+  get '/' => 'user/show'
   get 'cover/index'
   get 'cover/show'
   get 'cover/new'
