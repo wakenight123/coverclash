@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
   
-  get '/' => 'user/show'
   get 'cover/index'
   get 'cover/show'
   get 'cover/new'
