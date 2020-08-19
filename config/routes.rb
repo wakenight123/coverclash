@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  root 'application#index'
   
   get 'cover/index'
   get 'cover/show'
