@@ -16,6 +16,9 @@ Rails.application.routes.draw do
   get 'user/song'
   get 'user/cover'
 
+  get '/signup' => 'users#new'
+  post '/signup' => 'users#create'
+
   resources :users, only: [:show] do   #users/id/songs
     resources :songs, only: [:index]
   end
